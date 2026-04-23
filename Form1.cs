@@ -1,3 +1,5 @@
+using System.Windows.Forms;
+
 namespace Project_CIS
 {
     public partial class Form1 : Form
@@ -24,24 +26,26 @@ namespace Project_CIS
 
             if (checkBox5.Checked)
                 total += 10.00;
-            else if (checkBox6.Checked)
+            if (checkBox6.Checked)
                 total += 30.00;
-            else if (checkBox7.Checked)
+            if (checkBox7.Checked)
                 total += 19.00;
-            else if (checkBox6.Checked)
+            if (checkBox6.Checked)
                 total += 30.00;
-            else if (checkBox7.Checked)
+            if (checkBox7.Checked)
                 total += 19.00;
+            if (checkBox8.Checked)
+                total += 10.00;
 
-            label2.Text = l
             label2.Text = "Total: $" + total.ToString("0.00");
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show("We created a Window");
-            Form myForm = new Form();
-            myForm.ShowDialog();
+            MessageBox.Show(" Thank you for placing your order");
+
+            this.Close();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -55,3 +59,4 @@ namespace Project_CIS
         }
     }
 }
+
